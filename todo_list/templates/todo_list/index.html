@@ -1,0 +1,15 @@
+{% extends 'todo_list/base.html' %}
+
+{% block title %}
+	list of todo
+{% endblock %}
+
+{% block body %}
+	<h1>TODO Heare ...</h1>
+  <ul>
+    <li> <a href="{% url 'todo_list:list' %}">All todo items</a></li>
+    <li><a href="{% url 'todo_list:done' %}">Done</a></li>
+  </ul>
+  <h2>TODos</h2>
+  {% include 'todo_list/comp/todo_items_list.html' %}
+{% endblock %}
